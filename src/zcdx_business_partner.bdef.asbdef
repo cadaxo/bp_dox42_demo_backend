@@ -1,8 +1,6 @@
 unmanaged implementation in class zbp_cdx_business_partner unique;
-
 define behavior for ZCDX_BUSINESS_PARTNER alias BusinessPartner
 //late numbering
-//lock master
 //authorization master
 //etag <field_name>
 {

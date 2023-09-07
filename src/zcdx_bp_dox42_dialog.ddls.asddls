@@ -3,7 +3,8 @@
 define abstract entity zcdx_bp_dox42_dialog 
  // with parameters parameter_name : parameter_type 
   {
-    extend_till : abap.string( 300 );
-    comments : abap.string( 300 );
+    @Consumption.valueHelpDefinition: [{ entity:{name: 'ZCDX_BP_DOX42_TEMPLATES', element: 'TemplateId' } }]
+    @EndUserText.label: 'Select Template:'
+    template_id : zcdx_dox42_templateid;
     
 }

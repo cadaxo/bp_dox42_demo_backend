@@ -28,7 +28,7 @@ define root view entity ZCDX_C_BUSINESS_PARTNER
    ]
  
   @Search.defaultSearchElement: true
-  @UI.lineItem: [{ position: 10, importance: #HIGH }, {type: #FOR_ACTION, dataAction: 'generateDOX42', label: 'Generate Factsheet DOX 42'}]
+  @UI.lineItem: [{ position: 10, importance: #HIGH }, {type: #FOR_ACTION, dataAction: 'generateDOX42', label: 'Generate Factsheet DOX42'}]
   @UI.selectionField: [{ position: 10 }]
   @UI.fieldGroup: [{ position: 10, qualifier: 'BP' }]
   

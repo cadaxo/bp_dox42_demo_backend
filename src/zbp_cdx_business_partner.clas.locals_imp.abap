@@ -1,45 +1,38 @@
-CLASS lhc_ZCDX_BUSINESS_PARTNER DEFINITION INHERITING FROM cl_abap_behavior_handler.
+CLASS lhc_BusinessPartner DEFINITION INHERITING FROM cl_abap_behavior_handler.
   PRIVATE SECTION.
 
-*    METHODS create FOR MODIFY
-*      IMPORTING entities FOR CREATE ZCDX_BUSINESS_PARTNER.
-*
-*    METHODS delete FOR MODIFY
-*      IMPORTING keys FOR DELETE ZCDX_BUSINESS_PARTNER.
-*
-*    METHODS update FOR MODIFY
-*      IMPORTING entities FOR UPDATE ZCDX_BUSINESS_PARTNER.
-
     METHODS read FOR READ
-      IMPORTING keys FOR READ ZCDX_BUSINESS_PARTNER RESULT result.
+      IMPORTING keys FOR READ BusinessPartner RESULT result.
 
     METHODS generateDOX42 FOR MODIFY
-      IMPORTING keys FOR ACTION ZCDX_BUSINESS_PARTNER~generateDOX42 RESULT result.
-
-    METHODS get_features FOR FEATURES
-      IMPORTING keys REQUEST requested_features FOR ZCDX_BUSINESS_PARTNER RESULT result.
+      IMPORTING keys FOR ACTION BusinessPartner~generateDOX42 RESULT result.
 
 ENDCLASS.
 
-CLASS lhc_ZCDX_BUSINESS_PARTNER IMPLEMENTATION.
-
-*  METHOD create.
-*  ENDMETHOD.
-*
-*  METHOD delete.
-*  ENDMETHOD.
-*
-*  METHOD update.
-*  ENDMETHOD.
+CLASS lhc_BusinessPartner IMPLEMENTATION.
 
   METHOD read.
   ENDMETHOD.
 
   METHOD generateDOX42.
-   zcl_dox42_demos=>generate_partner_factsheet( i_partner_id =  '0000000011' ).
-  ENDMETHOD.
 
-  METHOD get_features.
+  DATA(lt_keys) = keys.
+  LOOP AT lt_keys ASSIGNING FIELD-SYMBOL(<fs_key>).
+
+    DATA(template_id) = <fs_key>-%param-template_id.
+    DATA(partner_id)  = <fs_key>-Partner.
+
+    DATA(pdf_data) =  zcl_dox42_demos=>generate_partner_factsheet(
+        i_partner_id  =  partner_id
+        i_template_id =  template_id
+    ).
+
+  ENDLOOP.
+
+*  result = VALUE #( FOR travel IN  ( mykey = travel-mykey
+*                                              %param    = travel
+*                                            ) ).
+
   ENDMETHOD.
 
 ENDCLASS.
