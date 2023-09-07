@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for Business Partners'
+define service ZCDX_C_BUSINESS_PARTNER_SRVDEF {
+  expose ZCDX_C_BUSINESS_PARTNER as BusinessPartner;
+}
