@@ -1,0 +1,21 @@
+@Metadata.layer: #CORE
+
+annotate view ZCDX_BP_ID_NUMBERS
+    with 
+{
+    @UI.lineItem: [ { position: 10 } ]
+    type; 
+    
+    @UI.lineItem: [ { position: 20 } ]
+    description;
+
+    @UI.lineItem: [ { position: 30 } ]
+    idnumber;
+
+    @UI.lineItem: [ { position: 40 } ]
+    valid_date_from;
+
+    @UI.lineItem: [ { position: 50 } ]
+    valid_date_to;
+
+}

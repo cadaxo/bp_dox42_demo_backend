@@ -1,0 +1,21 @@
+@Metadata.layer: #CORE
+
+annotate view ZCDX_BP_BANK_DETAILS
+    with 
+{
+    @UI.lineItem: [ { position: 10 } ]
+    bkvid;
+
+    @UI.lineItem: [ { position: 20 } ]
+    banks;
+
+    @UI.lineItem: [ { position: 30 } ]
+    bankl;
+
+    @UI.lineItem: [ { position: 40 } ]
+    bankn;
+
+    @UI.lineItem: [ { position: 50 } ]
+    iban;
+
+}

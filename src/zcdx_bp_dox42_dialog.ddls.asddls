@@ -7,4 +7,5 @@ define abstract entity zcdx_bp_dox42_dialog
     @EndUserText.label: 'Select Template:'
     template_id : zcdx_dox42_templateid;
     
+    
 }

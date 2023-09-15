@@ -3,12 +3,16 @@
 {
 "FROM":
 [
+"ZBP_C_FACT_SHEET",
 "ADRC",
 "BUT000",
 "BUT020"
 ],
 "ASSOCIATED":
-[],
+[
+"ZCDX_BP_BANK_DETAILS",
+"ZCDX_BP_ID_NUMBERS"
+],
 "BASE":
 [],
 "ANNO_REF":

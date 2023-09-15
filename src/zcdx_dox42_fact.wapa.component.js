@@ -1,0 +1,2 @@
+sap.ui.define(["sap/suite/ui/generic/template/lib/AppComponent"],function(e){return e.extend("com.cadaxo.ui5.zcdxdox42factsheet.Component",{metadata:{manifest:"json"}})});                                                                                    
+//# sourceMappingURL=Component.js.map                                                                                                                                                                                                                          
